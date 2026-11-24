@@ -1,0 +1,21 @@
+{
+  "enabled": true,
+  "logHandshake": true,
+  "logDisconnect": false,
+  "logSummary": true,
+  "summaryIntervalSeconds": 60,
+  "summaryTopPacketCount": 12,
+  "includeSyntheticPackets": false,
+  "warnPacketsPerSecondPerClient": 1000,
+  "warnCooldownSeconds": 60,
+  "logPlayerNames": false,
+  "logIPAddresses": false,
+  "snapshot": {"enabled": false, "path": "./logs/packetfactory-ts-status.json"},
+  "performance": {"highConcurrency": false},
+  "transport": {
+    "enabled": true,
+    "tcp": {"noDelay": true, "keepAlive": true, "keepAliveInitialDelayMs": 30000},
+    "backpressure": {"enabled": true, "highWaterBytes": 524288, "lowWaterBytes": 131072, "maxPauseMs": 2500, "retryCooldownMs": 3000},
+    "logging": {"warnOnCongestion": true, "warningCooldownMs": 30000, "logSummary": false, "summaryIntervalSeconds": 120}
+  }
+}
